@@ -1,0 +1,36 @@
+dic = {'item0': 'A', 'item1': ['B', 'C'], 'item2': [10, 11, 'D']}
+dic2 = {'item3': 'G', 'item4': [2, 4], 'item5': ['L', 'P', 'D']}
+
+print("Dictionary:")
+print(dic)
+
+print("Print dictionary items:")
+for items in dic.items():
+    print(items)
+
+print("Print dictionaries keys:")
+for keys in dic.keys():
+    print(keys)
+
+print("Print dictionary key values:")
+for values in dic.values():
+    print(values)
+
+print("Count keys in dictionary:")
+print len(dic)
+
+print("Count number of values in each key:")
+for key, value in dic.items():
+    # print value
+    counter = key, len([item for item in value if item])
+    print(counter)
+
+newdic = dic.update(dic2)
+print(newdic)
+
+
+
+
+
+
+

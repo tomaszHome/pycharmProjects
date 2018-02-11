@@ -5,3 +5,8 @@ time,date,partname,partnumber,status,office
 12:00,23-May,AURORA,AURA001,faulty,uk
 16:00,10-Mar,FARCOM,FCOM001,faulty,sf
 17:00,09-Apr,FARCOM,FCOM002,faulty,uk
+13:00,09-May,LEMPDU,LPDU0001,faulty,uk
+14:00,08-Jun,LEMPDU,LPDU0002,faulty,uk
+12:00,08-Jul,LEMPDU,LPDU0003,faulty,uk
+16:00,07-Aug,LEMOBC,LOBC0001,faulty,uk
+17:00,06-Sep,AISMOD,AISMD001,faulty,uk
