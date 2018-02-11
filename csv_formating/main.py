@@ -41,16 +41,3 @@ if __name__ == '__main__':
             for items in partnumber:
                 row = str(partname) + "," + str(items) + "\n"
                 csv.write(row)
-
-
-
-
-
-
-
-
-
-
-
-
-
