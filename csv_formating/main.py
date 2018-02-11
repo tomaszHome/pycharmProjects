@@ -3,41 +3,48 @@ import csv
 # Stores organised parts
 parts = {}
 
-with open('csv_test_invertory.csv', mode='rU') as csvFile:
-    # Reads csv file, delimiter set to ','
-    reader = csv.reader(csvFile, delimiter=',')
-    for n, row in enumerate(reader):
-        if not n:
-            # Skip header row (n = 0).
-            continue
-        part = row[2]
-        number = row[3]
-        if part not in parts:
-            parts[part] = list()
-        parts[part].append(number)
+input_file = 'csv_test_inventory.csv'
+output_file = 'report.csv'
 
-    print(parts)
+if __name__ == '__main__':
 
-    for key, value in parts.items():
-        # print value
-        counter = key, len([item for item in value if item])
-        print(counter)
 
-    report = 'report.csv'
-    csv = open(report, "w")
-    columnTitleRow = "part name, part number\n"
+    with open(input_file, mode='rU') as csvFile:
+        # Reads csv file, delimiter set to ','
+        reader = csv.reader(csvFile, delimiter=',')
+        for n, row in enumerate(reader):
+            if not n:
+                # Skip header row (n = 0).
+                continue
+            part = row[2]
+            number = row[3]
+            if part not in parts:
+                parts[part] = list()
+            parts[part].append(number)
 
-    csv.write(columnTitleRow)
+        for key in sorted(parts.iterkeys()):
+            print "%s: %s" % (key, parts[key])
 
-    for part in parts:
-        #print(parts.keys())
-        partname = part
-        print(partname)
-        partnumber = parts[part]
-        for items in partnumber:
-            print(items)
-            row = str(partname) + "," + str(items) + "\n"
-            csv.write(row)
+        for key, value in parts.items():
+            # print value
+            counter = key, len([item for item in value if item])
+            print(counter)
+
+        csv = open(output_file, "w")
+        column_title_row = "part name, part number\n"
+
+        csv.write(column_title_row)
+
+        for part in sorted(parts):
+            partname = part
+            partnumber = parts[part]
+            for items in partnumber:
+                row = str(partname) + "," + str(items) + "\n"
+                csv.write(row)
+
+
+
+
 
 
 
