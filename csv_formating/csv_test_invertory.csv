@@ -1,0 +1,7 @@
+time,date,partname,partnumber,status,office
+15:00,06-Dec,AISHAT,AISHT001,faulty,uk
+13:00,14-Aug,AURORA,AURA002,faulty,sf
+14:00,01-Feb,AURORA,AURA003,faulty,uk
+12:00,23-May,AURORA,AURA001,faulty,uk
+16:00,10-Mar,FARCOM,FCOM001,faulty,sf
+17:00,09-Apr,FARCOM,FCOM002,faulty,uk
