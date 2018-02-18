@@ -8,7 +8,6 @@ output_file = 'report.csv'
 
 if __name__ == '__main__':
 
-
     with open(input_file, mode='rU') as csvFile:
         # Reads csv file, delimiter set to ','
         reader = csv.reader(csvFile, delimiter=',')
